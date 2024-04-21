@@ -1,0 +1,514 @@
+{
+	"info": {
+		"_postman_id": "7815d84b-0b2f-49ce-96d7-e974000a04c5",
+		"name": "EB3_Final",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18755636"
+	},
+	"item": [
+		{
+			"name": "dentist",
+			"item": [
+				{
+					"name": "DentistGetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/dentist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"dentist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DentistGetByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/dentist/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"dentist",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DentistPut",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "tokenPostman",
+								"value": "dh1234",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\t\t\"id_dentist\":          1,\r\n\t\t\t\"name\":               \"Juan\",\r\n\t\t\t\"lastname\":           \"Perez\",\r\n\t\t\t\"registration_number\": \"021\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/dentist/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"dentist",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DentistPost",
+					"request": {
+						"auth": {
+							"type": "apikey"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "tokenPostman",
+								"value": "dh1234",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\r\n\t\"name\":               \"Carlos\",\r\n\t\"lastname\":           \"Cepeda\",\r\n\t\"registration_number\": \"018\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/dentist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"dentist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "tokenPostman",
+								"value": "dh1234",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\t\t\"id_dentist\":          1,\r\n\t\t\t\"name\":               \"Julio\",\r\n\t\t\t\"lastname\":           \"Gil\",\r\n\t\t\t\"registration_number\": \"020\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/dentist/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"dentist",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "appointment",
+			"item": [
+				{
+					"name": "AppointmentGetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/appointment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"appointment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AppointmentGetByID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/appointment/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"appointment",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AppointmentPut",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "tokenPostman",
+								"value": "dh1234",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_appointment\": 2,\r\n    \r\n    \"description\": \"Turno actualizado 3\",\r\n   \r\n    \"dentist\": {\r\n        \"id_dentist\": 1,\r\n        \"name\": \"Guillermo\",\r\n        \"lastname\": \"Gomez\",\r\n        \"registration_number\": \"097\"\r\n    },\r\n    \"patient\": {\r\n        \"id_patient\": 4,\r\n        \"name\": \"Luz\",\r\n        \"lastname\": \"Garcia\",\r\n        \"address\": \"nueva casa\",\r\n        \"dni\": \"12345678\",\r\n        \"registration_date\": \"2023-12-25T00:00:00Z\"\r\n    },\r\n     \"datetime\": \"2023-12-25T00:00:00Z\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/appointment/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"appointment",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AppointmentPost",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "tokenPostman",
+								"value": "dh1234",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n           \r\n            \"description\": \"Turno 3\",\r\n            \"dentist\": {\r\n                \"registration_number\": \"012\"\r\n            },\r\n            \"patient\": {\r\n                \"dni\": \"123456\"\r\n            },\r\n            \"datetime\": \"2024-04-20T12:20:12.8537632-02:00\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/appointment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"appointment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patchAppointment",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "tokenPostman",
+								"value": "dh1234",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_appointment\": 4,\r\n    \r\n   /* \"description\": \"Turno actualizado 4\",\r\n   \r\n    \"dentist\": {\r\n        \"id_dentist\": 1,\r\n        \"name\": \"Carlos\",\r\n        \"lastname\": \"Cepeda\",\r\n        \"registration_number\": \"019\"\r\n    },\r\n    \"patient\": {\r\n        \"id_patient\": 6,\r\n        \"name\": \"Maria\",\r\n        \"lastname\": \"Gomez\",\r\n        \"address\": \"calle falsa\",\r\n        \"dni\": \"12345678\",\r\n        \"registration_date\": \"2024-04-20T00:00:00Z\"\r\n    },*/\r\n     \"datetime\": \"2024-04-19T00:00:00Z\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/appointment/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"appointment",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "patient",
+			"item": [
+				{
+					"name": "PatientGetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/patient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"patient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PatientGetByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/patient/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"patient",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PatientUpdate",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "tokenPostman",
+								"value": "dh1234",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n            \"id_patient\": 6,\r\n            \"name\": \"Maria\",\r\n            \"lastname\": \"Jimenez\",\r\n            \"address\": \"Calle 13\",\r\n            \"dni\": \"12345\",\r\n            \"registration_date\": \"2024-04-20\"\r\n        }\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/patient/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"patient",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PatientPost",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "tokenPostman",
+								"value": "dh1234",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\r\n    \"name\": \"Romi\",\r\n    \"lastname\": \"Cuatro\",\r\n    \"address\": \"Siempre viva\",\r\n    \"dni\": \"12310\",\r\n    \"registration_date\": \"2023-11-30\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/patient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"patient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PatientPatch",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "tokenPostman",
+								"value": "dh1234",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\t\t\r\n        \"id_patient\": 8,\r\n    \"name\": \"Carla\"\r\n   \r\n\r\n \r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/patient/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"patient",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/ping",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"ping"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
