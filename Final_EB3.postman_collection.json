@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "7815d84b-0b2f-49ce-96d7-e974000a04c5",
-		"name": "EB3_Final",
+		"_postman_id": "3d1148ac-507b-4c30-ac91-4e1547dc21ea",
+		"name": "Back3_Final",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "18755636"
 	},
@@ -34,9 +34,16 @@
 					"name": "DentistGetByID",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/dentist/1",
+							"raw": "http://localhost:8080/api/v1/dentist/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -46,7 +53,7 @@
 								"api",
 								"v1",
 								"dentist",
-								"1"
+								"2"
 							]
 						}
 					},
@@ -65,7 +72,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\t\t\"id_dentist\":          1,\r\n\t\t\t\"name\":               \"Juan\",\r\n\t\t\t\"lastname\":           \"Perez\",\r\n\t\t\t\"registration_number\": \"021\"\r\n}",
+							"raw": "{\r\n\t\t\t\"id_dentist\":          1,\r\n\t\t\t\"name\":               \"Pedro\",\r\n\t\t\t\"lastname\":           \"Gomez\",\r\n\t\t\t\"registration_number\": \"097\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -105,7 +112,46 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\r\n\t\"name\":               \"Carlos\",\r\n\t\"lastname\":           \"Cepeda\",\r\n\t\"registration_number\": \"018\"\r\n}",
+							"raw": "{\r\n\t\r\n\t\"name\":               \"Luis\",\r\n\t\"lastname\":           \"Gomez\",\r\n\t\"registration_number\": \"097\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/dentist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"dentist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DentistPost_2",
+					"request": {
+						"auth": {
+							"type": "apikey"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "tokenPostman",
+								"value": "dh1234",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\r\n\t\"name\":               \"Luis\",\r\n\t\"lastname\":           \"Gomez\",\r\n\t\"registration_number\": \"097\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -141,13 +187,41 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\t\t\"id_dentist\":          1,\r\n\t\t\t\"name\":               \"Julio\",\r\n\t\t\t\"lastname\":           \"Gil\",\r\n\t\t\t\"registration_number\": \"020\"\r\n}",
+							"raw": "{\r\n\t\t\t\"id_dentist\":          1,\r\n\t\t\t\"name\":               \"Gabriel\",\r\n\t\t\t\"lastname\":           \"Castellanos\",\r\n\t\t\t\"registration_number\": \"020\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/dentist/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"dentist",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DentistDeleteByID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "tokenPostman",
+								"value": "dh1234",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "http://localhost:8080/api/v1/dentist/1",
 							"protocol": "http",
@@ -269,7 +343,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n           \r\n            \"description\": \"Turno 3\",\r\n            \"dentist\": {\r\n                \"registration_number\": \"012\"\r\n            },\r\n            \"patient\": {\r\n                \"dni\": \"123456\"\r\n            },\r\n            \"datetime\": \"2024-04-20T12:20:12.8537632-02:00\"\r\n        }",
+							"raw": "{\r\n           \r\n            \"description\": \"Turno 2\",\r\n            \"dentist\": {\r\n                \"registration_number\": \"012\"\r\n            },\r\n            \"patient\": {\r\n                \"dni\": \"123456\"\r\n            },\r\n            \"datetime\": \"2024-04-20T10:30:11.8637632-03:00\"\r\n        }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -305,7 +379,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id_appointment\": 4,\r\n    \r\n   /* \"description\": \"Turno actualizado 4\",\r\n   \r\n    \"dentist\": {\r\n        \"id_dentist\": 1,\r\n        \"name\": \"Carlos\",\r\n        \"lastname\": \"Cepeda\",\r\n        \"registration_number\": \"019\"\r\n    },\r\n    \"patient\": {\r\n        \"id_patient\": 6,\r\n        \"name\": \"Maria\",\r\n        \"lastname\": \"Gomez\",\r\n        \"address\": \"calle falsa\",\r\n        \"dni\": \"12345678\",\r\n        \"registration_date\": \"2024-04-20T00:00:00Z\"\r\n    },*/\r\n     \"datetime\": \"2024-04-19T00:00:00Z\"\r\n    \r\n}",
+							"raw": "{\r\n    \"id_appointment\": 2,\r\n    \r\n    \"description\": \"Turno actualizado 2\",\r\n   \r\n    \"dentist\": {\r\n        \"id_dentist\": 1,\r\n        \"name\": \"Carlos\",\r\n        \"lastname\": \"Cepeda\",\r\n        \"registration_number\": \"024\"\r\n    },\r\n    \"patient\": {\r\n        \"id_patient\": 4,\r\n        \"name\": \"Maria\",\r\n        \"lastname\": \"Gimenez\",\r\n        \"address\": \"Calle 12\",\r\n        \"dni\": \"1234567\",\r\n        \"registration_date\": \"2024-04-21T00:00:00Z\"\r\n    },\r\n     \"datetime\": \"2024-04-21T00:00:00Z\"\r\n    \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -361,7 +435,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/patient/5",
+							"raw": "http://localhost:8080/api/v1/patient/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -371,7 +445,7 @@
 								"api",
 								"v1",
 								"patient",
-								"5"
+								"1"
 							]
 						}
 					},
@@ -390,7 +464,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": " {\r\n            \"id_patient\": 6,\r\n            \"name\": \"Maria\",\r\n            \"lastname\": \"Jimenez\",\r\n            \"address\": \"Calle 13\",\r\n            \"dni\": \"12345\",\r\n            \"registration_date\": \"2024-04-20\"\r\n        }\r\n\r\n",
+							"raw": " {\r\n            \"id_patient\": 3,\r\n            \"name\": \"Juean\",\r\n            \"lastname\": \"Peres\",\r\n            \"address\": \"Siempre viva 123\",\r\n            \"dni\": \"12345678\",\r\n            \"registration_date\": \"2024-04-21\"\r\n        }\r\n\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -398,7 +472,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/patient/3",
+							"raw": "http://localhost:8080/api/v1/patient/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -408,7 +482,7 @@
 								"api",
 								"v1",
 								"patient",
-								"3"
+								"1"
 							]
 						}
 					},
@@ -463,7 +537,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\t\t\r\n        \"id_patient\": 8,\r\n    \"name\": \"Carla\"\r\n   \r\n\r\n \r\n\r\n}",
+							"raw": "{\r\n\t\t\t\r\n        \"id_patient\": 5,\r\n    \"name\": \"Luz\"\r\n   \r\n\r\n \r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
